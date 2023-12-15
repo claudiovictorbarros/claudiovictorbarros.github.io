@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --preto: #111;
+    --branco: #fff;
+    --azul: #4aa2fa;
+    --icones: #333;
+    --bordas: #ccc;
+}
+
+body {
+    overflow: hidden;
+}
+
+.interface {
+    width: 100%;
+    margin: auto;
+    max-width: 1366px;
+    min-width: 370px;
+}
+
+.interface .cabecalho .menu-top {
+    height: 50px;
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--bordas);
+}
+
+.cabecalho .menu-top .logos {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .menu-top .logos img {
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cabecalho .menu-top .logos .logo-text {
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--icones);
+}
+
+.cabecalho .menu-top .menu-option {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-top .menu-option li a {
+    font-size: 17px;
+    position: relative;
+    color: var(--icones);
+}
+
+.menu-top .menu-option li a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -8px;
+    transition: all .3s;
+    transform: translateX(0);
+    background: #4aa2fa;
+}
+
+.menu-top .menu-option li a:hover::before {
+    width: 100%;
+    transform: translateX(1);
+}
+
+.menu-top .menu-option .controlos {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-top .menu-option .controlos button {
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 3px;
+    transition: all .3s;
+    color: var(--branco);
+    background-color: var(--azul);
+}
+
+.menu-top .menu-option .controlos button:hover {
+    background-color: #0763be;
+}
+
+.interface .cabecalho .menu-controlos {
+    display: flex;
+    height: 45px;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .menu-controlos .texto {
+    font-size: 17px;
+    color: var(--icones);
+}
+
+.cabecalho .menu-controlos .menu-btns {
+    gap: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .menu-controlos .grids {
+    gap: 20px;
+    height: 100%;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    border-right: 1px solid var(--bordas);
+}
+
+.menu-controlos .menu-btns .grids li i {
+    display: flex;
+    align-items: center;
+}
+
+.menu-controlos .menu-btns .grids li i {
+    font-size: 19px;
+    cursor: pointer;
+    transition: all .3s;
+    color: var(--icones);
+}
+
+.menu-controlos .menu-btns li i:hover,
+.menu-controlos .menu-btns .menu i:hover {
+    color: var(--azul);
+}
+
+.menu-controlos .menu-btns .grids li span {
+    font-size: 17px;
+    margin-left: 7px;
+}
+
+.menu-controlos .menu-btns .menu {
+    display: flex;
+    padding: 0 5px 0 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.menu-controlos .menu-btns .menu i {
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.menu-controlos .menu-btns .menu select {
+    font-size: 17px;
+    padding: 5px 14px;
+    border: 1px solid #ccc;
+}
+
+.interface .corpo-conteudo {
+    gap: 2px;
+    width: 100%;
+    height: 84vh;
+    display: flex;
+    margin: 5px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.interface .corpo-conteudo .paletas {
+    width: 225px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #02fa21;
+}
+
+.corpo-conteudo .paletas .detalhes {
+    gap: 20px;
+    display: flex;
+    margin-top: 290px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paletas .detalhes .texto-color {
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: var(--branco);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #3b39395e;
+}
+
+.paletas .detalhes .icones {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paletas .detalhes .icones i {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--branco);
+    text-shadow: 1px 1px 2px #0801015e;
+}
